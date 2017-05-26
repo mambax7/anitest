@@ -1,0 +1,475 @@
+<style type="text/css">
+
+
+/* Appended and combined from files FS_Styles, FS_Welcome_styles, Press_Release_Styles css and inc*/
+
+body 
+{ background-color: #ffffff;
+  color: 000000;
+  font-family: arial,helvetica,sans-serif;
+  font-size: x-small;}
+
+td
+{ font-family: verdana,arial,helvetica,sans-serif;
+  font-size: x-small; }
+
+.familySearchTitle
+{
+  color: #003366;
+  font-family: arial,helvetica,sans-serif;
+  font-size: 14pt;
+  font-weight: bold;
+  line-height: 15pt;
+  text-decoration: none;}
+
+/* ----Heading/Prompt Styles---- */
+
+.inputLabel
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small; }
+
+.inputLabelStrong
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small;
+  font-weight: bold; }
+
+.inputField
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small; }
+
+.backToTop
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small;
+  font-style: italic; }
+
+.docTitle
+{ color: #ffffff; 
+  font-family: arial,helvetica,sans-serif;
+  font-size: x-small;
+  letter-spacing: 3pt; }
+
+.bodyText
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small; }
+
+.errorText
+{ color: #ff0000;
+  font-family: arial,helvetica,sans-serif;
+  font-size: x-small; }
+
+.headerText
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small; }
+  
+.resourceName
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small;
+  font-weight: bold; }
+
+.heading3
+{ font-family: arial,helvetica,sans-serif;
+  font-weight: bold; }
+
+.heading2
+{ font-family: arial,helvetica,sans-serif;
+  font-size: large;
+  font-weight: bold; }
+
+.heading1
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-large;
+  font-weight: bold; }
+  
+.information
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  color: #003366; }
+  
+.Surname
+{ font-family: arial,helvetica,sans-serif;
+  font-size: xx-small; }
+
+.infoAnchor
+{
+  color: #003366;
+  font-family: arial,helvetica,sans-serif;
+  font-size: x-small; }
+  
+A.infoAnchor
+{
+  color: #003366;
+  text-decoration: none;
+}
+A:hover.infoAnchor
+{
+  color: #003366;
+  text-decoration: underline;
+}
+A.featureTitleAnchor
+{ color: #003366;
+  font-family: arial,helvetica,sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  text-decoration: none; }
+
+A:hover.featureTitleAnchor
+{ color: #003366;
+  text-decoration: underline; }
+
+A:visited.featureTitleAnchor
+{ color: #003366; }
+
+A:active.featureTitleAnchor
+{ color: #003366; }
+
+A:link.featureTitleAnchor
+{ color: #003366; }
+
+A.textLink
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small;
+  color: #003366;
+  text-decoration: none; }
+
+A:hover.textLink
+{ color: #003366;
+  text-decoration: underline; }
+
+/* ----Individual Record Styles---- */
+.individualHeading
+{ font-family: arial,helvetica,sans-serif;
+  font-size: medium;
+  font-weight: bold; }
+
+.individualName
+{ font-family: arial,helvetica,sans-serif;
+  font-size: medium;
+  font-weight: bold; }
+
+.individualLabel
+{ font-family: arial,helvetica,sans-serif;
+  font-size: small;
+  font-weight: bold; }
+
+.individualData
+{ font-family: arial,helvetica,sans-serif;
+  font-size: small; }
+
+/* ----Family Group Record Styles---- */
+.familyHeading
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small;
+  font-weight: bold; }
+
+.familyName
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small; }
+
+.familyLabel
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small;
+  font-weight: bold; }
+
+.familyData
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small; }
+
+/* ----Pedigree Chart Styles---- */
+
+A.pedigreeName
+{ font-family: verdana,arial,helvetica,sans-serif;
+  font-size: xx-small;
+  font-weight: bold; 
+  color: #003366; }
+
+A:link.pedigreeName
+{ color: #003366; }
+
+A:visited.pedigreeName
+{ color: #003366; }
+
+A:active.pedigreeName
+{ color: #003366; }
+
+.pedigreeLabel
+{ font-family: arial,helvetica,sans-serif;
+  font-size: xx-small; }
+
+.pedigreeData
+{ font-family: arial,helvetica,sans-serif;
+  font-size: xx-small; }
+
+.pedigreeNumber
+{ font-family: arial,helvetica,sans-serif;
+  font-size: xx-small; }
+
+
+/* ----Anchor/Link Styles---- */
+A:link
+{ color: #003366; }
+
+A:visited
+{ color: #996699; }
+
+A:active
+{ color: #666633; }
+
+A.menuItem
+{ color: #003366;
+  font-family: arial,helvetica,sans-serif;
+  font-size: x-small;
+  text-decoration: none; }
+
+A:link.menuItem
+{ color: #003366;
+  text-decoration: none; }
+
+A:visited.menuItem
+{ color: #003366; }
+
+A:active.menuItem
+{ color: #003366; }
+
+A:hover.menuItem
+{ color: #003366;
+  text-decoration: underline; }
+
+.copyrightText
+{ font-family: arial,helvetica,sans-serif;
+  font-size: xx-small; }
+
+A.copyright
+{ text-decoration: underline; }
+
+/* Styles from Press_Release_styles */  
+.featurestitle 
+{  font-family: "Times New Roman", Times, serif; 
+   font-size: large; 
+   color: #666633; 
+   text-decoration: none}
+   
+a.featurestitle:hover 
+{  color="#0066CC"}
+
+.featuressubtitle 
+{  font-family: "Times New Roman", Times, serif; 
+   font-size: medium; 
+   color: #666633; 
+   text-decoration: none}
+   
+a.featuressubtitle:hover 
+{  color="#0066CC"}
+
+.featureslink
+{  font-family: Arial, Helvetica, sans-serif; 
+   font-size: x-small; 
+   color: #003366; 
+   text-decoration: underline}
+   
+a.featureslink:hover 
+{  color="#0066CC"}
+
+.featurestext
+{  font-family: Arial, Helvetica, sans-serif; 
+   font-size: x-small; 
+   color: #000000; 
+   text-decoration: none}
+   
+a.featurestext:hover 
+{  color="#0066CC"}
+
+.stepHeading1
+{ background-color: #ccccff;
+  color: #003366;
+  font-family: verdana,arial,sans-serif;
+  font-size: 12pt;
+  font-weight: bold; }
+
+/* Styles for new Welcome page */  
+.welcomeHeadline 
+{  font-family: arial,helvetica,sans-serif; 
+   font-size: 105%; 
+   color: #000000; 
+   font-style: italic;
+   font-weight: bolder;}
+
+.welcomeFieldLabel 
+{  font-family: arial,helvetica,sans-serif; 
+   font-size: 75%; 
+   color: #000000;}
+
+.familySearchSectionHeading, .familySearchSection2Heading, .familySearchSection3Heading, .freePAFDownloadHeading
+{
+  color: #003366;
+  font-family: arial,helvetica,sans-serif;
+  font-weight: bold;
+  text-decoration: none;}
+
+.familySearchSectionHeading
+{
+  font-size: 110%;}
+
+.familySearchSection2Heading, .freePAFDownloadHeading
+{
+  margin-bottom: 0;
+  font-size: 110%;}
+
+.freePAFDownloadHeading
+{
+  text-align: center;}
+
+.familySearchSection3Heading
+{
+  margin-bottom: 0;
+  font-size: 100%;}
+
+.familySearchSection2List, .familySearchSection3List
+{
+	list-style-position: outside;
+	margin: 4px 0 0 1.2em;
+	padding: 0 0 0 0;}
+
+.familySearchSection2List li, .familySearchSection3List li
+{
+	margin-bottom: 2px;}
+
+.welcomePage A:visited
+{ color: #663399; }
+
+.welcomePage A:active
+{ color: #336699; }
+
+.welcomePage A:link
+{ color: #336699; }
+
+.welcomePage A:hover
+{ color: #6699cc; }
+
+.mainContent
+{  text-align: center;}
+
+.mainWelcomePageTable
+{ }
+
+.mainWelcomePageSearchTable
+{ margin-bottom: 1.5em;}
+
+.adjustmentForIECellsWithFieldsNextToInputBoxes
+{ padding-bottom: 1px;}
+
+.welcomePageInputField, .welcomePageInputFieldNoSize
+{ font-family: arial,helvetica,sans-serif;
+  font-size: x-small;}
+
+.welcomePageInputField
+{ width: 150px; }
+
+.welcomePageAncestorSearchButton
+{ background-color: #ffffff;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;}
+
+.welcomePageAncestorSearchButtonText
+{ position:absolute;
+  color: #ffffff;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 5px 0 0 15px;}
+
+.advancedSearch {
+	position: relative;
+	right: 30px;
+}
+
+.fieldWithOkButton {
+  margin: 2px 0 2px 0;
+  height: 30px;}
+
+.emailAddressField, .fhcPlaceField {
+  height: 28px;}
+
+.welcomePageOKButton
+{ background-color: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;}
+
+.welcomePageOKButtonText
+{ position: absolute;
+  margin: 6px 0 0 4px;}
+
+.welcomePageRegisterButton
+{ background-color: transparent;
+  display: block;
+  margin: 8px 0 8px 0;
+  border: 0;
+  padding: 0;
+  cursor: pointer;}
+
+.welcomePageRegisterButtonText
+{ position:absolute;
+  color: #ffffff;
+  font-size: 10pt;
+  font-weight: bold;
+  margin: 6px 0 0 12px;}
+
+.featuresSquareLtSpace, .featuresSquareLt, .downloadItemsSquareLt
+{ background-color: #e9ffe9;}
+
+.featuresSquareDkSpace, .featuresSquareDk, .downloadItemsSquareDk
+{ background-color: #d9f9d9;}
+
+.featuresSquareLt, .featuresSquareDk
+{ width: 50%;
+   padding: 8px 12px 0 12px;}
+
+.downloadInstructionsSquare
+{ background-color: #ffffcc;}
+
+.onlineDistributionSquare
+{}
+
+.downloadInstructionsSquare, .onlineDistributionSquare, .downloadItemsSquareLt, .downloadItemsSquareDk
+{ padding: 8px 12px 0 12px;}
+
+.copyrightBarAnchor, A.copyrightBarAnchor, A:link.copyrightBarAnchor, A:active.copyrightBarAnchor, A:visited.copyrightBarAnchor
+{ color: white;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 8pt;
+  line-height: 9pt;
+  text-decoration: none; }
+  
+A:hover.copyrightBarAnchor
+{ color: white;
+  text-decoration: underline; }
+
+#stateID, #provinceID {
+  position: relative;
+  color: black;}
+
+#provinceID {
+  left: -30px;}
+
+.specialsTable {
+  margin-bottom: 12px;}
+
+.freePAFDownload {
+   display: block;
+   width: 300px;
+   margin-left; 15px;
+   padding: 8px;
+   background-color: #ffffcc}
+
+.linkToPAFDownload {
+   display: block;
+   text-align: center;}
+
+.inputFieldLabel {
+   display: block;
+}
+
+</style>

@@ -1,0 +1,49 @@
+<?php //echo "here"; 
+mysql_connect("mysql8.hspheredns.com","thepetg_pedigree","chloe");
+mysql_select_db('thepetg_pedigree');
+//print_r($_POST);
+  $fid=$_POST['fid'];
+//$fid=ad;
+//echo "SELECT ID, lastname, firstname from mSVsD_eigenaar where firstname like '%$fid%' or lastname like '%$fid%' ORDER BY  lastname,firstname  asc";
+
+ //  $queryfoks = mysqli_query("SELECT ID, lastname, firstname from mSVsD_eigenaar  where firstname like '%a%' or lastname like '%a%' ORDER BY  lastname,firstname  asc");
+	   //echo "SELECT ID, NAAM, id_eigenaar from mSVsD_stamboom where id_eigenaar= '$fid' ORDER BY NAAM  asc";
+	   $queryfoks = mysqli_query("SELECT ID, NAAM, id_fokker from mSVsD_stamboom where id_fokker= '$fid' ORDER BY NAAM  asc");
+		
+		//	while($resfoks = mysql_fetch_array($queryfoks)){ print_r($resfoks);
+    
+	//echo "sdaf";
+	//}exit;	
+	$coont=mysql_num_rows($queryfoks);
+	if($coont!=0){
+    ?>
+	
+	<table id="tabsdsatyle">
+		<thead style="background-color:lightgrey; border:1px solid white;">
+			<th>Joey ID</th>
+			<th>Joey name</th>
+			<th>Breeder id</th>
+			<th>Breeder name</th>
+		</thead>
+		<tbody id="tabsssatyle" style="background-color:lightblue; border:1px solid white">
+		<?php while($row = mysql_fetch_array($queryfoks))  {?>
+			<tr>
+				<td align="center"><?php echo $row['ID'];?></td>
+				<td align="center"><?php echo $row['NAAM'];?></td>
+				<td align="center"><?php echo $row['id_fokker'];?></td>
+				<?php
+				$sqlown=mysqli_query("select firstname,lastname from mSVsD_eigenaar where ID='$row[id_fokker]'");
+				$fetchdata=mysql_fetch_array($sqlown);
+				?>
+				<td align="center"><?php echo $fetchdata['lastname'].','.$fetchdata['firstname'];?></td>
+				
+		</tr>
+		<?php } ?>
+		</tbody>
+	</table>
+	<div>  <a style="color: #6FA5E2; font-size: 20px; font-weight: 500; line-height: 15px;
+    position: absolute; right: 311px; " onclick="javascript:update();">Update Breeder</a></div>
+   <?php } else { ?>
+   <h3>No Breeders are associated with this <?php echo $fid;?></h3><?php
+   } ?>
+   

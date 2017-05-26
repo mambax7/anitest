@@ -1,0 +1,67 @@
+<?php /*
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+$("#id_fokker").click(function(){
+					//alert('sdfv');
+					var valuetext=$("#id_fokker option:selected").text();
+					var valueId=$("#id_fokker option:selected").val();
+					//alert(valueId);
+
+					   $("#livefilter").val(valuetext);
+					  $("#id_fokker").hide('fast');
+					  $('#bnames').val(valuetext);
+					  $('#bid').val(valueId);
+					  //$('#script').submit();
+					  document.location='http://pedigree.thepetglider.com/modules/animal/o_b_update/script.php?a='+valueId+'&bred='+valuetext;
+					 // $("#div1").css("display","block");
+					  //$("#div1").on("load", "script.php?a="+valueId);
+					  });
+					  $("#id_eigenaar").click(function(){
+						alert('sdfv');
+						var value=$("#id_eigenaar option:selected").text();
+						var valuesid=$("#id_eigenaar option:selected").val();
+
+						   $("#ownerfilter").val(value);
+						  $("#id_eigenaar").hide('fast');
+						document.location='http://pedigree.thepetglider.com/modules/animal/o_b_update/scripts.php?a='+valuesid+'&on='+value;
+
+						 // $("#div1").on("load", "script.php?a="+valuesid);
+						  });
+});
+</script> */?>
+<?php //echo "here"; 
+mysql_connect("mysql8.hspheredns.com","thepetg_pedigree","chloe");
+mysql_select_db('thepetg_pedigree');
+//print_r($_POST);
+  $fid=$_POST['fid'];
+//$fid=ad;
+//echo "SELECT ID, lastname, firstname from mSVsD_eigenaar where firstname like '%$fid%' or lastname like '%$fid%' ORDER BY  lastname,firstname  asc";
+
+ //  $queryfoks = mysqli_query("SELECT ID, lastname, firstname from mSVsD_eigenaar  where firstname like '%a%' or lastname like '%a%' ORDER BY  lastname,firstname  asc");
+	   $queryfoks = mysqli_query("SELECT ID, lastname, firstname from mSVsD_eigenaar where firstname like '%$fid%' or lastname like '%$fid%' ORDER BY  lastname,firstname  asc limit 0,20");
+		
+		//	while($resfoks = mysql_fetch_array($queryfoks)){ print_r($resfoks);
+    
+	//echo "sdaf";
+	//}exit;	
+    ?>
+     
+    <select name="state_select" id="id_eigenaar" style="width:250px;">
+    
+    <?php
+    while($row = mysql_fetch_array($queryfoks))
+    {
+        $queryfokid = mysqli_query("SELECT count(*) as cnts from mSVsD_stamboom where id_eigenaar='$row[ID]' ");
+	$queyyy=mysql_fetch_array($queryfokid);
+	if($queyyy[cnts]!=0)
+	  {
+		$id=$row['ID'];
+        $name=$row['lastname'].','.$row['firstname'];
+    echo '<option value="'.$id.'">'.$name.'</option>';
+	}
+
+    } ?>
+</select>
+   

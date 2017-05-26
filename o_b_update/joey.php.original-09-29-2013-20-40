@@ -1,0 +1,49 @@
+<?php 
+//session_start(); //echo $_SESSION['username']; //exit;
+
+mysql_connect("mysql8.hspheredns.com","thepetg_pedigree","chloe");
+mysql_select_db('thepetg_pedigree');
+
+
+echo $_REQUEST['a'];
+//echo "select firstname,lastname from mSVsD_eigenaar  where ID = '".$_REQUEST['a']."'";
+$fnlname=mysqli_query("select firstname,lastname from mSVsD_eigenaar  where ID = '".$_REQUEST['a']."'");
+$fnlnameres=mysql_fetch_array($fnlname);
+//echo "<pre>";print_r($fnlnameres);
+$getres=mysqli_query("select ID,firstname,lastname,emailadres,user from mSVsD_eigenaar  where firstname= '$fnlnameres[firstname]' and lastname ='$fnlnameres[lastname]' ORDER BY  lastname,firstname  asc");
+//$getress=mysql_fetch_array($getres); print_r($getress);
+?>
+<div >
+<fieldset id="checkArray">		
+<legend>Select one or more to display joeys</legend>
+	<table id="tabstyle">
+		<thead style="background-color:lightgrey; border:1px solid white;">
+			<th>Check to select</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Email</th>
+			<th>Created User</th>
+			<th>User Email</th>
+		</thead>
+		<tbody style="background-color:lightblue; border:1px solid white">
+		<?php $i=1; while($data=mysql_fetch_array($getres)){ ?>
+		
+			<tr>
+				<td align="center"><input id="checked.<?php echo $i;?>" type="checkbox" value="<?php echo $data['ID'];?>" onclick="javascript:selected('<?php echo $data['ID'];?>');" name="checks[]"/></td>
+				<td align="center"><?php echo $data['firstname'];?></td>
+				<td align="center"><?php echo $data['lastname'];?></td>
+				<td align="center"><?php echo $data['emailadres'];?></td>
+				<?php
+				//echo "select uname,email from mSVsD_users where uid='$data[user]'";
+				$usname=mysqli_query("select uname,email from mSVsD_users where uid='$data[user]'");
+				$udata=mysql_fetch_array($usname);
+				?>
+				<td align="center"><?php echo $udata['uname']; ?></td>
+				<td align="center"><?php echo $udata['email'];?></td>
+			</tr>
+	     <?php $i=$i+1; } ?>
+		 <tr><td> <input type="submit" name="submts" value="select gliders"/></td></tr>
+        </tbody>
+	</table>
+</fieldset>
+</div>
